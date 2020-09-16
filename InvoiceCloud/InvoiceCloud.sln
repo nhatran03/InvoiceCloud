@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Portal", "InvoiceCloud.Portal\InvoiceCloud.Portal.csproj", "{0E60951A-A8EB-431B-A827-69D28C860549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud", "InvoiceCloud\InvoiceCloud.csproj", "{253B2B43-8EAE-441F-9576-62D1DAEBFD7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Ef", "InvoiceCloud.Ef\InvoiceCloud.Ef.csproj", "{3CEED96E-1EF8-47DE-B34D-CDFDB5BA370B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Core", "InvoiceCloud.Core\InvoiceCloud.Core.csproj", "{04776F20-26B3-485F-B5DB-5847B293A098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Service", "InvoiceCloud.Service\InvoiceCloud.Service.csproj", "{89E846CB-180F-4A08-960E-8AA6EB34AD4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Proxy", "Microsoft.AspNetCore.Proxy\Microsoft.AspNetCore.Proxy.csproj", "{F8D6B39F-07D0-45D0-ABD5-0B1C14D9AC3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Api", "InvoiceCloud.Api\InvoiceCloud.Api.csproj", "{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E60951A-A8EB-431B-A827-69D28C860549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E60951A-A8EB-431B-A827-69D28C860549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E60951A-A8EB-431B-A827-69D28C860549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E60951A-A8EB-431B-A827-69D28C860549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253B2B43-8EAE-441F-9576-62D1DAEBFD7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253B2B43-8EAE-441F-9576-62D1DAEBFD7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253B2B43-8EAE-441F-9576-62D1DAEBFD7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253B2B43-8EAE-441F-9576-62D1DAEBFD7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEED96E-1EF8-47DE-B34D-CDFDB5BA370B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEED96E-1EF8-47DE-B34D-CDFDB5BA370B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEED96E-1EF8-47DE-B34D-CDFDB5BA370B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEED96E-1EF8-47DE-B34D-CDFDB5BA370B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04776F20-26B3-485F-B5DB-5847B293A098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04776F20-26B3-485F-B5DB-5847B293A098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04776F20-26B3-485F-B5DB-5847B293A098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04776F20-26B3-485F-B5DB-5847B293A098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E846CB-180F-4A08-960E-8AA6EB34AD4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E846CB-180F-4A08-960E-8AA6EB34AD4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E846CB-180F-4A08-960E-8AA6EB34AD4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E846CB-180F-4A08-960E-8AA6EB34AD4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D6B39F-07D0-45D0-ABD5-0B1C14D9AC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D6B39F-07D0-45D0-ABD5-0B1C14D9AC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D6B39F-07D0-45D0-ABD5-0B1C14D9AC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D6B39F-07D0-45D0-ABD5-0B1C14D9AC3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACA79906-E6B5-45BC-A6BC-56C84093C6B7}
+	EndGlobalSection
+EndGlobal
