@@ -46,6 +46,10 @@
     <Compile Include="Domain\Dtos\IEntityDtoOfTPrimaryKey.cs" />
     <Compile Include="Domain\Dtos\IListResult.cs" />
     <Compile Include="Domain\Dtos\ListResultDto.cs" />
+    <Compile Include="Domain\Entities\Auditing\IHasCreationTime.cs" />
+    <Compile Include="Domain\Entities\Auditing\IHasDeletionTime.cs" />
+    <Compile Include="Domain\Entities\Auditing\IHasModificationTime.cs" />
+    <Compile Include="Domain\Entities\Auditing\IModificationAudited.cs" />
     <Compile Include="Domain\Entities\Entity.cs" />
     <Compile Include="Domain\Entities\IEntity.cs" />
     <Compile Include="Domain\Entities\IEntityOfTPrimaryKey.cs" />
