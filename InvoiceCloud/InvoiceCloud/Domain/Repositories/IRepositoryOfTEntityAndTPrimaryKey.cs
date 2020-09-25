@@ -34,11 +34,16 @@ namespace InvoiceCloud.Domain.Repositories
 		/// <returns>Entity</returns>
 		TEntity Get(TPrimaryKey id);
 
+		TEntity FirstOrDefault(TPrimaryKey id);
+		Task<TEntity> FirstOrDefaultAsync(TPrimaryKey id);
+
 		/// <summary>
 		/// Gets an entity with given given predicate or null if not found.
 		/// </summary>
 		/// <param name="predicate">Predicate to filter entities</param>
 		TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate);
+
+		Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
 
 		/// <summary>
 		/// Inserts a new entity.

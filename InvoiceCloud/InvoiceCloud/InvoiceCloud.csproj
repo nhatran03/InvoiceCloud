@@ -31,8 +31,45 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=5.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.5.0.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=2020.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2020.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,23 +78,128 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Check.cs" />
+    <Compile Include="Collections\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Configuration\DictionaryBasedConfig.cs" />
+    <Compile Include="Configuration\IDictionaryBasedConfig.cs" />
+    <Compile Include="Configuration\ISettingManager.cs" />
+    <Compile Include="Configuration\ISettingValue.cs" />
+    <Compile Include="Configuration\SettingScope.cs" />
+    <Compile Include="Configuration\Startup\ILocalizationConfiguration.cs" />
+    <Compile Include="Configuration\Startup\ILocalizationSourceList.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\DependencyLifeStyle.cs" />
+    <Compile Include="Dependency\IConventionalDependencyRegistrar.cs" />
+    <Compile Include="Dependency\IConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\IIocManager.cs" />
+    <Compile Include="Dependency\IIocRegistrar.cs" />
+    <Compile Include="Dependency\IIocResolver.cs" />
+    <Compile Include="Dependency\IocManager.cs" />
+    <Compile Include="Dependency\ISingletonDependency.cs" />
+    <Compile Include="Dependency\ITransientDependency.cs" />
+    <Compile Include="Dependency\SingletonDependency.cs" />
+    <Compile Include="DisposeAction.cs" />
     <Compile Include="Domain\Dtos\Entity.cs" />
     <Compile Include="Domain\Dtos\IEntityDto.cs" />
     <Compile Include="Domain\Dtos\IEntityDtoOfTPrimaryKey.cs" />
     <Compile Include="Domain\Dtos\IListResult.cs" />
     <Compile Include="Domain\Dtos\ListResultDto.cs" />
+    <Compile Include="Domain\Entities\Auditing\AuditedEntity.cs" />
+    <Compile Include="Domain\Entities\Auditing\CreationAuditedEntity.cs" />
+    <Compile Include="Domain\Entities\Auditing\FullAuditEntity.cs" />
+    <Compile Include="Domain\Entities\Auditing\IAudited.cs" />
+    <Compile Include="Domain\Entities\Auditing\ICreationAudited.cs" />
+    <Compile Include="Domain\Entities\Auditing\IDeletionAudited.cs" />
+    <Compile Include="Domain\Entities\Auditing\IFullAudited.cs" />
     <Compile Include="Domain\Entities\Auditing\IHasCreationTime.cs" />
     <Compile Include="Domain\Entities\Auditing\IHasDeletionTime.cs" />
     <Compile Include="Domain\Entities\Auditing\IHasModificationTime.cs" />
     <Compile Include="Domain\Entities\Auditing\IModificationAudited.cs" />
+    <Compile Include="Domain\Entities\Caching\EntityCache.cs" />
+    <Compile Include="Domain\Entities\Caching\IEntityCache.cs" />
     <Compile Include="Domain\Entities\Entity.cs" />
     <Compile Include="Domain\Entities\IEntity.cs" />
     <Compile Include="Domain\Entities\IEntityOfTPrimaryKey.cs" />
+    <Compile Include="Domain\Entities\IPolicies\IPolicy.cs" />
     <Compile Include="Domain\Repositories\IRepositoryOfTEntity.cs" />
     <Compile Include="Domain\Repositories\IRepositoryOfTEntityAndTPrimaryKey.cs" />
     <Compile Include="Domain\Repositories\RepositoryBase.cs" />
+    <Compile Include="Domain\Services\DomainService.cs" />
+    <Compile Include="Domain\Services\IDomainService.cs" />
+    <Compile Include="Domain\Uow\ConnectionStringResolveArgs.cs" />
+    <Compile Include="Domain\Uow\DataFilterConfiguration.cs" />
+    <Compile Include="Domain\Uow\IActiveUnitOfWork.cs" />
+    <Compile Include="Domain\Uow\IConnectionStringResolver.cs" />
+    <Compile Include="Domain\Uow\ICurrentUnitOfWorkProvider.cs" />
+    <Compile Include="Domain\Uow\InnerUnitOfWorkCompleteHandle.cs" />
+    <Compile Include="Domain\Uow\IUnitOfWork.cs" />
+    <Compile Include="Domain\Uow\IUnitOfWorkCompleteHandle.cs" />
+    <Compile Include="Domain\Uow\IUnitOfWorkDefaultOptions.cs" />
+    <Compile Include="Domain\Uow\IUnitOfWorkFilterExecuter.cs" />
+    <Compile Include="Domain\Uow\IUnitOfWorkManager.cs" />
+    <Compile Include="Domain\Uow\UnitOfWorkBase.cs" />
+    <Compile Include="Domain\Uow\UnitOfWorkFailedEventArgs.cs" />
+    <Compile Include="Domain\Uow\UnitOfWorkManager.cs" />
+    <Compile Include="Domain\Uow\UnitOfWorkOptions.cs" />
+    <Compile Include="Domain\Values\ValueObject.cs" />
+    <Compile Include="Events\Bus\Entities\EntityChangedEventData.cs" />
+    <Compile Include="Events\Bus\Entities\EntityEventData.cs" />
+    <Compile Include="Events\Bus\EventData.cs" />
+    <Compile Include="Events\Bus\Handlers\IEventHandler.cs" />
+    <Compile Include="Events\Bus\Handlers\IEventHandlerOfTEventData.cs" />
+    <Compile Include="Events\Bus\IEventData.cs" />
+    <Compile Include="Events\Bus\IEventDataWithInheritableGenericArgument.cs" />
+    <Compile Include="Extensions\EventHandlerExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="InvoiceCloudException.cs" />
+    <Compile Include="InvoiceCloudServiceBase.cs" />
+    <Compile Include="IUserIdentifier.cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionary.cs" />
+    <Compile Include="Localization\Dictionaries\ILocalizationDictionaryProvider.cs" />
+    <Compile Include="Localization\Dictionaries\LocalizationDictionary.cs" />
+    <Compile Include="Localization\ILocalizationManager.cs" />
+    <Compile Include="Localization\LanguageInfo.cs" />
+    <Compile Include="Localization\LocalizedString.cs" />
+    <Compile Include="Localization\NullLocaizationManager.cs" />
+    <Compile Include="Localization\Source\ILocalizationSource.cs" />
+    <Compile Include="Localization\Source\LocalizationSourceExtensions.cs" />
+    <Compile Include="Localization\Source\LocalizationSourceExtensionsInfo.cs" />
+    <Compile Include="Localization\Source\NullLocaizationSource.cs" />
+    <Compile Include="ObjectMapping\IObjectMapper.cs" />
+    <Compile Include="ObjectMapping\NullObjectMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\Caching\CacheExtensions.cs" />
+    <Compile Include="Runtime\Caching\CacheManagerExtensions.cs" />
+    <Compile Include="Runtime\Caching\ICache.cs" />
+    <Compile Include="Runtime\Caching\ICacheManager.cs" />
+    <Compile Include="Runtime\Caching\ITypeCache.cs" />
+    <Compile Include="Runtime\Caching\TypedCacheExtensions.cs" />
+    <Compile Include="Runtime\Caching\TypedCacheWrapper.cs" />
+    <Compile Include="Runtime\IAmbientDataContext.cs" />
+    <Compile Include="Runtime\IAmbientScopeProvider.cs" />
+    <Compile Include="Runtime\Remoting\CallContextAmbientDataContext.cs" />
+    <Compile Include="Runtime\Remoting\DataContextAmbientScopeProvider.cs" />
+    <Compile Include="Runtime\Session\IInvoiceCloudSession.cs" />
+    <Compile Include="Runtime\Session\InvoiceCloudSessionBase.cs" />
+    <Compile Include="Runtime\Session\NullInvoiceCloudSession.cs" />
+    <Compile Include="Runtime\Session\SessionOverride.cs" />
+    <Compile Include="Timing\Clock.cs" />
+    <Compile Include="Timing\ClockProviders.cs" />
+    <Compile Include="Timing\IClockProvider.cs" />
+    <Compile Include="Timing\LocalClockProvider.cs" />
+    <Compile Include="Timing\Timezone\ITimeZoneConverter.cs" />
+    <Compile Include="Timing\Timezone\TimeZoneConverter.cs" />
+    <Compile Include="Timing\UnspecifiedClockProvider.cs" />
+    <Compile Include="Timing\UtcClockProvider.cs" />
+    <Compile Include="UserIdentifier.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

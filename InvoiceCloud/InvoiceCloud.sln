@@ -15,7 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Service", "Inv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Proxy", "Microsoft.AspNetCore.Proxy\Microsoft.AspNetCore.Proxy.csproj", "{F8D6B39F-07D0-45D0-ABD5-0B1C14D9AC3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceCloud.Api", "InvoiceCloud.Api\InvoiceCloud.Api.csproj", "{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvoiceCloud.Api", "InvoiceCloud.Api\InvoiceCloud.Api.csproj", "{E9757E75-827F-4451-9BCD-4E3CD8D5C50F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7B3637A-DB6A-45CB-B962-049692756518}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

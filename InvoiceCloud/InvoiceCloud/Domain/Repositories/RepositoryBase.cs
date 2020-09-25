@@ -21,9 +21,19 @@ namespace InvoiceCloud.Domain.Repositories
 		{
 			return GetAll().FirstOrDefault(CreateEqualityExpressionForId(id));
 		}
-		public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate)
+
+		public virtual Task<TEntity> FirstOrDefaultAsync(TPrimaryKey id)
+		{
+			return Task.FromResult(FirstOrDefault(id));
+		}
+		public virtual TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate)
 		{
 			return GetAll().FirstOrDefault(predicate);
+		}
+
+		public virtual Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
+		{
+			return Task.FromResult(FirstOrDefault(predicate));
 		}
 
 		public virtual TEntity Get(TPrimaryKey id)
